@@ -1,0 +1,16 @@
+html	
+
+body > div.row > div > img {
+	
+	
+}
+body > div.row > div > div.col-md-4.highlight.make-this-big > img{
+	/*position: relative;	
+	float: left;
+*/
+	
+}
+body > div.row > div:nth-child(3) > img {
+	/*position: relative;
+	float: left;*/
+}

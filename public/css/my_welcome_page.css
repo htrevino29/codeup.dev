@@ -1,0 +1,33 @@
+html
+
+
+header .header-content .header-content-inner p {
+	color: white;
+}
+
+.bg-primary {
+	color: white;
+	background-color: #16374F;
+}
+
+.fa-4x {
+	color: #628395;
+}
+
+#services {
+	background-color: #EAEAEA;
+}
+
+#contact > div > div > div:nth-child(3) > p > a {
+	color: #003D5;
+}
+
+#mainNav > div > div.navbar-header > a {
+	color: #003D5;
+}
+
+#resume {
+	background-color: #63789D;
+	color: D6D6D6;
+}
+

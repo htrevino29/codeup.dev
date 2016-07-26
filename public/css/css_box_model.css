@@ -1,0 +1,52 @@
+h1 {
+	color:blue;
+	text-decoration: underline;
+	
+}
+
+.box {
+	border: 1px solid black;
+	width: 150px; 
+	height: 50px;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#red_box {
+	background-color: red;
+	
+
+}
+
+#orange_box {
+	background-color: orange;
+	margin-left: 30px;
+	
+}
+
+#yellow_box {
+	background-color: yellow;
+	margin-left: 60px;
+	
+}
+
+#green_box {
+	background-color: green;
+	margin-left: 90px;
+	
+}
+
+#blue_box {
+	background-color: blue;
+	margin-left: 120px;
+	
+}
+
+#violet_box{
+	background-color: violet;
+	margin-left: 150px;
+	
+}
