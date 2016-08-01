@@ -1,0 +1,46 @@
+# pattern for setting up a problem
+
+read the exercise
+what's the real problem?
+what's the output that we need to produce?
+what's the given input?
+what are the other specifications, validation?
+
+eliminate the junk
+
+takes notes of what you want the code to do, where in what order.
+input--> process --> output
+
+figure out the variables
+-what stuff changes (what inputs need to be worked on)
+-what stuff gets repeated (strings in the output)
+-what stuff stays the same just once
+-naming the nouns
+	- subtotal
+	- taxAmount
+	- discountPercentage
+	- finalTotal
+
+
+eliminate the junk
+
+Write out pseudocode
+	- defining inputs
+	- try out variable names (expect that they might change)
+	- defining process
+		- what verbs need to happen to what nouns
+		- what does each verb do
+		- whats the order of the verb
+		- after a verb happens to a noun, does that mean we need a new noun name to hold the result.
+	- making your output match the specification
+	- do we need a loop? does the loop need to happen at least once?
+	- 
+code small things
+start converting tiny pieces of pseudocode into real code, take it from the top
+what did happen vs. what you expected to happen?
+does it make sense?
+revisit variable (and function names) to see if they make sense
+//loop until you generate a random number that is odd	
+
+
+

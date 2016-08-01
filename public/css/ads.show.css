@@ -1,0 +1,15 @@
+.btn-product{
+	width: 100%;
+}
+
+.items {
+	padding-top: 50px;
+	padding-left: 100px;
+	float: left;
+
+}
+
+.secondrow {
+	
+	clear: left;
+}

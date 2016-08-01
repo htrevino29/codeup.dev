@@ -1,7 +1,7 @@
 "use strict";
 
 var luckyNumber = Math.floor(Math.random()* 6)
-	console.log(luckyNumber);
+	console.log("your lucky number is " + luckyNumber);
 var price1 = (60 - (60 * .1))
 var price2 = (60 - (60 * .25))
 var price3 = (60 - (60 * .35))
@@ -9,7 +9,7 @@ var price4 = (60 - (60 * .50))
 
 switch (luckyNumber) {
     case 0 :
-        console.log("you no discount");
+        console.log("you get no discount");
         break;
     case 1 :
         console.log("You get a 10% discount your total is $" + price1);
@@ -30,6 +30,7 @@ switch (luckyNumber) {
 }
 
 // question 2
+
 switch (luckyNumber) {
 	case 0 :
 		console.log("Jan")
