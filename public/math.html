@@ -3,6 +3,20 @@
 	<title>MATH</title>
 	<script>
 		"use strict";
+		var response = prompt("add, subtract, multiply, divide?")
+		if (response == "add"){
+		var number1 = prompt("enter the first number you wish to add");
+		var number2 = prompt("enter the second number you wish to add");
+			
+
+		}
+			console.log( number1 "+" number2 )
+
+
+
+
+
+
 		function sum (number1, number2){
 			var add = (number1 + number2);
 			return add;
@@ -32,17 +46,36 @@
 		//write a function called isNumeric(number) that returns a boolean
 		// Add functionality for each function that makes sure the parameters are numbers
 		// if one of the parameters is not a number, return "inputs must be numeric"
-
-		function sum(a, b) {
-			if(isNumeric(a) && isNumeric(b)){
-				return a + b;
-			} else {
+		// function isNumeric(number){
+		// 	//returns true if the value is numeric
+		// 	// returns false if the value is not a number data type
+		// }
+		// function sum(a, b) {
+		// 	if(isNumeric(a) && isNumeric(b)){
+		// 		return parseFloat(a) + parseFloat(b);
+		// 	} else {
+		// 		return "inputs must be numeric";
 				
-			}
-		}
+		// 	}
+		// }
 
-		console.log(squareMasSquare (4, 2));
+		// console.log(squareMasSquare (4, 2));
 		
+
+ // 1. on page load ask the user what they would like to do:
+ // (add, subtract, divide, multiply)
+
+ // based on the user's response, get numbers from the user to pass into your math functions
+
+ // ensure the uer's inputs are valid!
+
+
+ 
+ // 2. write a cuntion averOfThree that takes 3 numbers and returns their average
+
+ // add functionality to allow the user to square a number, or average 3 numbers
+
+ // (note that now you will not always have just 2 inputs!)
 
 
 
