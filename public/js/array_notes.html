@@ -1,0 +1,105 @@
+<iDOCTYPE>
+<html>
+	<head>
+		<script>
+		(function(){
+			"use strict";
+
+		//write a function that takes an array and returns a random element from that array.
+		// function getRandomElement (arr){
+		// 	//todo
+		// }
+
+		// getRandomElement([1,2,3,4])
+		var myArray = [1,2,3,4];
+
+		var randomIndex = Math.floor(Math.random() * myArray.length);
+
+		console.log(myArray[randomIndex]);
+
+		//split 
+		//turns the string into an array
+		'1,2,3,4,5'.split(',');
+
+		"1 2 4 5 6".split(' ');
+
+		'1codeup2codeup3codeup4codeup5codeup'.split('codeup');
+
+		'codeup'.split('');
+
+		[1,2,3].join(' *** ');\
+
+
+
+		//example
+
+		var myString = "codeup";
+
+		var stringAsArray = myString.split('');
+
+		var arrayReversed = stringAsArray.reverse();
+
+		var reversedString = arrayReversed.join('');
+
+		//or
+
+		'codeup'.split('').reverse().join('');
+
+
+
+
+		//sum of digits in a number
+		// turn my number into a string
+		// turn that string into an array of digits
+		// loop through that array and add together the digits
+
+
+		function sumTheDigits() {
+			
+			var numberString = number.toString();
+			var numberArray = number.split('');
+			var sum = 0;
+
+			numberArray.forEach(function(number){
+				sum += parseInt(number);
+			});
+			return sum;
+		}
+		// call the function(* any number goes here*)
+		sumTheDigits();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		)();
+		</script>
+	</head>
+	<body>	
+		<title>Array notes>
+
+	</body>
+</html>
