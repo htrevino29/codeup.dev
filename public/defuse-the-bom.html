@@ -22,10 +22,10 @@
     // TODO: This function needs to be called once every second
     var detonate = setInterval(function() {
 
-        if (detonationTimer == 0) {
+        if (detonationTimer == -1) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
-        } else if (detonationTimer > 0) {
+        } else if (detonationTimer > -10) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
 
