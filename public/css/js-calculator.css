@@ -1,0 +1,28 @@
+button{
+	 background-color: black; /* Green */
+    border: none;
+    color: salmon;
+    padding: 30px 45px;
+    height: 15px;
+    width: 15px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 8px;
+    line-height: 5px;
+ }  
+ .bottomRow{
+ 	padding: 30px 35px;
+
+ }
+textarea{
+	background-color: black;
+	color: salmon;
+}
+body{
+	text-align: center;
+	margin: 12em;
+}
