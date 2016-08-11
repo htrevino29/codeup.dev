@@ -30,10 +30,35 @@ $(document).ready(function() {
     // alert(headerContent);
 
 ///////////// exercise 4.1.4//////////////////////
+
 //Combine your selectors that highlight all the h1, p, and li elements.
-	$('h1, p, li').css('background-color', 'yellow');
 
+	// $('h1, p, li').css('background-color', 'yellow');
 
+$('h1').hover(
+    function() {
+        $(this).css('background-color', 'orange');
+    },
+    function() {
+        $(this).css('background-color', 'white');
+    }
+);
+
+$('p').dblclick(
+    function() {
+        $(this).css('font-size', '18px');
+    }
+    
+);
+
+$('li').hover(
+    function() {
+        $(this).css('background-color', 'green');
+    },
+    function() {
+        $(this).css('background-color', 'white');
+    }
+);
 
 
 
