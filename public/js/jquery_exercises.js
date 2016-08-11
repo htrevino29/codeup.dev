@@ -35,13 +35,11 @@ $(document).ready(function() {
 
 	// $('h1, p, li').css('background-color', 'yellow');
 
-$('h1').hover(
+$('h1').click(
     function() {
         $(this).css('background-color', 'orange');
-    },
-    function() {
-        $(this).css('background-color', 'white');
     }
+   
 );
 
 $('p').dblclick(
@@ -59,50 +57,6 @@ $('li').hover(
         $(this).css('background-color', 'white');
     }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
