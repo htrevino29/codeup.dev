@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+
+    <script>
+
+        "use strict";
+
+        //use this to learn the key numbers
+        $(document).keyup(function(event){
+            // console.log(event.keyCode);
+        });
+        //this is the string that we need the user to enter 
+        // "konami code"
+        var cheatCode = "3838404037393739666513"
+
+		var input = '';
+		
+		//this function will take the keys and make a string
+		$(document).keyup(function(e){
+			input +=e.which;			
+			check_input();
+			console.log(input);
+		});
+		// if the string entered matches the cheatcode variable
+		// the console will log the added lives and clear the inputs.
+		function check_input() {
+			if(input.indexOf(cheatCode) != -1) {
+			alert("you added 30 lives");
+			input='';
+			
+			} 
+		}
+						
+		
+
+
+
+
+       
+   
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- 38,38,40,40,37,39,37,39,66,65,13 -->
+
