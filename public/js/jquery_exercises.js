@@ -19,15 +19,22 @@ $(document).ready(function() {
 
 ///////////// exercise 4.1.3//////////////////////
 
-	$('li').css('font-size', '20px');
+	// $('li').css('font-size', '20px');
 
 //Craft selectors that highlight all the h1, p, and li elements with a yellow background.
-	$('h1').css('background-color', 'yellow');
-	$('p').css('background-color', 'yellow');
-	$('li').css('background-color', 'yellow');
+	// $('h1').css('background-color', 'yellow');
+	// $('p').css('background-color', 'yellow');
+	// $('li').css('background-color', 'yellow');
 //Create a jQuery statement to alert the contents of your h1 element(s).
-	var headerContent= $('h1').html();
-    alert(headerContent);
+	// var headerContent= $('h1').html();
+    // alert(headerContent);
+
+///////////// exercise 4.1.4//////////////////////
+//Combine your selectors that highlight all the h1, p, and li elements.
+	$('h1, p, li').css('background-color', 'yellow');
+
+
+
 
 
 
