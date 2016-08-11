@@ -51,10 +51,10 @@ $('p').dblclick(
 
 $('li').hover(
     function() {
-        $(this).css('background-color', 'green');
+        $(this).css('color', 'red');
     },
     function() {
-        $(this).css('background-color', 'white');
+        $(this).css('color', 'black');
     }
 );
 
