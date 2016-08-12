@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="styleSheet" href="/css/konami_stylesheet.css">
 </head>
 <body>
     <h1>Konami Code</h1>
@@ -25,7 +26,7 @@
 		
 		//this function will take the keys and make a string
 		$(document).keyup(function(e){
-			input +=e.which;			
+			input +=e.which;	//e.keycCode is the same as e.which		
 			check_input();
 			console.log(input);
 		});
@@ -38,6 +39,10 @@
 			
 			} 
 		}
+
+///////////////////////////////////////////notes for konami code///////////////////////////////////////////////////////////
+
+
 						
 		
 
