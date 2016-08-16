@@ -1,0 +1,21 @@
+h1 {
+	text-align: center;
+	color: #B7D1DA;
+}
+body{
+	background-color: #B2A198;
+}
+h2 {
+	color: lightgrey;
+}
+h4 {
+	color: black;
+}
+h5 {
+	color:#E2E8DD;
+}
+div {
+	padding-left: 180px;
+	padding-right: 180px;
+	text-align: center;
+}

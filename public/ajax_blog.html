@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>AJAX BLOG</title>
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/ajax_blog_css.css">
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -29,9 +31,9 @@
         posts.forEach(function (post) {
             
             content += '<h2>' + post.title + '</h2>';
-            content += '<h3>' + post.content + '</h3>';
-            content += '<h4>' + post.categories + '</h4>';
-            content += '<h4>' + post.date + '</h4>';
+            content += '<h4>' + post.content + '</h3>';
+            content += '<h5>' + post.categories + '</h4>';
+            content += '<h5>' + post.date + '</h4>';
             console.log(content);
         });
         $('#posts').append(content)

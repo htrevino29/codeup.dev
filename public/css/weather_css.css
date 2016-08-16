@@ -1,0 +1,38 @@
+#weatherBox {
+	height: 450px;
+	width: 660px;
+	background-color: #B1DDF1;
+}
+div {
+	border: solid;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	float: left;
+}
+
+#todaysWeather {
+	background-color: lightblue;
+	margin: 5px;
+	border: solid;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#tomorrow {
+	background-color: lightblue;
+	margin: 5px;
+	border: solid;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	
+}
+#dayAfter {
+	background-color: lightblue;
+	border: solid;
+	margin: 5px;
+	border-radius: 5px;
+	padding-left: 40px;
+	padding-right: 40px;	
+}
