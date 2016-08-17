@@ -1,5 +1,5 @@
 #weatherBox {
-	height: 3000px;
+	height: 1200px;
 	width: 1100px;
 	background-color: #B1DDF1;
 }
@@ -43,6 +43,11 @@
 	margin-left: 5px
 }
 h1{
+	text-align: center;
+	padding-top: 40px;
+
+}
+h3{
 	text-align: center;
 }
 #latitude {
