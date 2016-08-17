@@ -1,42 +1,61 @@
 #weatherBox {
-	height: 450px;
-	width: 680px;
+	height: 3000px;
+	width: 1100px;
 	background-color: #B1DDF1;
 }
-div {
-
+/*div {
+	text-align: center;
 	border: solid;
-	border-radius: 5px;
-	padding-left: 40px;
-	padding-right: 40px;
+	border-radius: 5px;	
 	float: left;
 }
-
+*/
 #todaysWeather {
 	background-color: lightblue;
-	margin: 5px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-left: 80px;
 	border: solid;
 	border-radius: 5px;
-	padding-left: 40px;
-	padding-right: 40px;
+
+
 }
 #tomorrow {
 	background-color: lightblue;
-	margin: 5px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	float: left;
 	border: solid;
 	border-radius: 5px;
-	padding-left: 40px;
-	padding-right: 40px;
-	
+	margin-left: 5px;
 }
 #dayAfter {
 	background-color: lightblue;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	float: left;
 	border: solid;
-	margin: 5px;
 	border-radius: 5px;
-	padding-left: 40px;
-	padding-right: 40px;	
+	margin-left: 5px
 }
 h1{
 	text-align: center;
 }
+#latitude {
+	height: 25px;
+	width: 200px;
+	margin: 10px;
+}
+#longitude {
+	height: 25px;
+	width: 200px;
+	margin: 10px;
+
+}
+#map-canvas {
+    width: 1100px;
+    height: 600px;

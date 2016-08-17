@@ -14,7 +14,13 @@
 			<h3 id='city'></h3>
 			<div id="todaysWeather"></div>		
 			<div id="tomorrow"></div>
-			<div id="dayAfter"></div>
+			<div id="dayAfter"></div>			
+			<form>
+				<input id="latitude" type="text" name="Lon" placeholder="Latitude">
+	  			<input id="longitude" type="text" name="lat" placeholder="Longitude">
+	  			<input type="submit" value="submit"><br>
+  			</form>
+  			<div id="map-canvas"></div>
 		</div>
 
 
@@ -28,6 +34,8 @@
 
 
 
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQNxqakOnAF_fB-kpf_aNBL7sWbmp_0i4"></script>
 		<script src="/js/weather-map.js"></script>
 	</body>
 </html>

@@ -2,12 +2,17 @@
 // function(){
 console.log('linked');
 var weatherObject;
+var newLat;
+var newLon;
 const myAPIKey = '1440d6a354ff5c61bea8267d20c6e4a8';
 
 $.get('http://api.openweathermap.org/data/2.5/forecast/daily', {
 	APPID: myAPIKey,
-	q:     'San Antonio, TX',
-	units: 'imperial'
+	lat:29.426791,
+	lon:-98.489602,
+	units: 'imperial',
+	cnt:3
+
 	
 }).done(function(data) {
 	console.log('Data returned from server:');
@@ -56,7 +61,30 @@ function addWeather (forcast) {
 		day3 += '<p>' + '<strong>pressure:</strong> ' + weatherObject.list[2].pressure + '</p>';
 	$('#dayAfter').append(day3);
 }
+// Set our map options
+	var mapOptions = {
+		// Set the zoom level
+		zoom: 6,
 
+		// This sets the center of the map at our location
+		center: {
+			lat:  29.426791,
+			lng: -98.489602
+		}
+	};
+
+	// Render the map
+	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+	var goldStar = {
+		path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+		fillColor: 'blue',
+		fillOpacity: 0.8,
+		scale: .1,
+		strokeColor: 'gold',
+		strokeWeight: 1
+	};
+
+    
 
 
 
