@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Programming books books</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script> 
 </head>
 <body>
     <h1>See your friend's books</h1>
@@ -27,10 +28,16 @@
         var options;
 
         friends.forEach(function (friend, i) {
-            options = '<option value="' + i + '">' + friend + '</option>';
+            options += '<option value="' + (i + 1) + '">' + friend.name + '</option>';
         });
 
+        console.log(options);
+
         $friendSelect.html(options);
+
+
+       
     </script>
+
 </body>
 </html>
