@@ -6,7 +6,11 @@ var lat;
 var lon;
 
 const myAPIKey = '1440d6a354ff5c61bea8267d20c6e4a8'; //key for weather api
-//gets 3 day forecast for coordiantes provided
+
+
+
+///////////////gets 3 day forecast for coordiantes provided/////////////////
+
 
 // $.get('http://api.openweathermap.org/data/2.5/forecast/daily', {
 // 	APPID: myAPIKey,
@@ -25,7 +29,7 @@ const myAPIKey = '1440d6a354ff5c61bea8267d20c6e4a8'; //key for weather api
 
 function addWeather (forcast) {
 	///////////////city name///////////////
-	console.log(forcast);
+	// console.log(forcast);
 	var location ='';
 		location += '<h3>' + forcast.city.name + '</h3>';
 	$('#city').append(location);
@@ -149,4 +153,4 @@ function initilizeWeather() {
 
 
 
-//})();
+// })();
