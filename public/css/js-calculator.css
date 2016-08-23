@@ -1,7 +1,7 @@
 button{
-	 background-color: black; /* Green */
+	 background-color: #627C85; 
     border: none;
-    color: salmon;
+    color: #A2E8DD;
     padding: 30px 45px;
     height: 15px;
     width: 15px;
@@ -13,16 +13,30 @@ button{
     margin: 3px;
     border-radius: 8px;
     line-height: 5px;
- }  
+}  
  .bottomRow{
  	padding: 30px 35px;
-
- }
-textarea{
-	background-color: black;
-	color: salmon;
 }
 body{
 	text-align: center;
 	margin: 12em;
+    background-color: #35524A;
 }
+#LeftBox{
+    width: 160px;
+    background-color: #779CAB;
+    color: #A2E8DD;  
+}
+#MiddleBox{
+    width: 50px;
+    background-color: #779CAB;
+    color: #A2E8DD;
+    
+}
+#RightBox{
+    width: 160px;
+    background-color: #779CAB;
+    color: #A2E8DD;
+    
+}
+
