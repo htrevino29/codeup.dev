@@ -1,53 +1,45 @@
 body{
 	background-color:#84A98C;
-	text-align: center;
+
 
 }
-#weatherBox {
-	height: 1200px;
-	width: 1100px;
-	
+#weatherBox{
+	margin:auto;
 }
+
+/*.centered {
+	width: 650px;
+}*/
 #todaysWeather {
 	background-color: #CAD2C5;
-	text-align: center;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin-left: 80px;
+	width: 200px;
+	height: 200px;
 	border: solid;
 	border-radius: 5px;
+	margin:5px;
 
 
 }
 #tomorrow {
-	background-color: #CAD2C5;
-	text-align: center;
-	width: 300px;
-	height: 300px;
-	float: left;
+	background-color: #CAD2C5;	
+	width: 200px;
+	height: 200px;
 	border: solid;
 	border-radius: 5px;
-	margin-left: 5px;
+	margin:5px;
+	
 }
 #dayAfter {
 	background-color: #CAD2C5;
-	text-align: center;
-	width: 300px;
-	height: 300px;
-	float: left;
+	width: 200px;
+	height: 200px;
 	border: solid;
 	border-radius: 5px;
-	margin-left: 5px
+	margin:5px;
+	
 }
-h1{
-	text-align: center;
-	padding-top: 40px;
 
-}
-h3{
-	text-align: center;
-}
+
 #latitude {
 	height: 25px;
 	width: 200px;
@@ -60,5 +52,5 @@ h3{
 
 }
 #map-canvas {
-    width: 1100px;
-    height: 600px;
+    width: 500px;
+    height: 400px;
