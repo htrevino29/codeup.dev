@@ -1,15 +1,11 @@
 body{
 	background-color:#84A98C;
-
-
 }
-#weatherBox{
-	margin:auto;
+#threeBoxes{
+	margin-left: 230px;
 }
 
-/*.centered {
-	width: 650px;
-}*/
+
 #todaysWeather {
 	background-color: #CAD2C5;
 	width: 200px;
@@ -17,6 +13,7 @@ body{
 	border: solid;
 	border-radius: 5px;
 	margin:5px;
+
 
 
 }
@@ -52,5 +49,7 @@ body{
 
 }
 #map-canvas {
-    width: 500px;
-    height: 400px;
+	box-shadow: 10px 10px 5px #2E4436;
+	margin-left: 10px;
+    width: 615px;
+    height: 300px;
