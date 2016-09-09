@@ -7,10 +7,16 @@ if($username == 'guest' && $password == 'password'){
 	echo $username;
 	echo $password;
 	header("Location: $redirectTo");
-} else {
+} if($username == '' && $password == '')  {
+	echo $username;
+	echo $password;
+
+}
+else {
 	echo "<script>
 	alert('username or password invalid');
 	</script>";
+	
 }
 
 ?>
