@@ -1,26 +1,21 @@
 <?php
 
+
+// controllers listen for requests
+// controllers call any logic that needs to run
+// to provide the appropriate response
+
+
+
+
 // Require or include statements are allowed here. All other code goes in the pageController function.
 
-/**
- * The pageController function handles all processing for this page.
- * @return array An associative array of data to be used in rendering the html view.
- */
-function pageController()
-{
-    // Initialize an empty data array.
-    $data = array();
-
-    // Add data to be used in the html view.
-    $data['message'] = 'Hello World!';
-
-    // Return the completed data array.
-    return $data;
-}
+// function pageController()
+// {
+ 
+// }
 // Call the pageController function and extract all the returned array as local variables.
-extract(pageController());
-
-
+// extract(pageController());
 
 $variable = isset($_GET['count']) ? $_GET['count'] : 0;
 
@@ -33,7 +28,6 @@ $variable = isset($_GET['count']) ? $_GET['count'] : 0;
         <title>PHP + HTML</title>
     </head>
     <body>
-        <?php echo $message; ?>
         <br>
         <h1>count <?= $variable ?> </h1>
         <br>
