@@ -7,10 +7,7 @@
 		// echo 'go die';
 	header("Location: $redirectTo");
 	die();
-	} else {
-		echo $_SESSION['logged_in_user'];	}
-
-
+	}
 
 ?>
 <!DOCTYPE html>
@@ -24,6 +21,7 @@
 	<body>
 		<div class='container col-lg-12'>
 			<h1 class='text-centered'>AUTHORIZED</h1>
+			<a href="logout.php">done!? click here!</a>
 		</div>
 	</body>
 	<script src="/js/bootstrap.min.js"></script>

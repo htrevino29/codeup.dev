@@ -19,6 +19,13 @@
 
 $variable = isset($_GET['count']) ? $_GET['count'] : 0;
 
+// ***************** new way ***********************
+// if(inputHas('counter')){
+//     $data['counter'] = inputGet('counter');
+// } else {
+//     $data['counter'] = 0;
+// }
+//**************************************************
 
 // Only use echo, conditionals, and loops anywhere within the HTML.
 ?>

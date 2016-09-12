@@ -27,9 +27,17 @@ function pageController()
 		'password' => $password,
 
 	];
-}
 
+	if(isset($_SESSION['username']))
+	{
+		header("Location: auth.php");
+		die();
+	}
+
+}
 extract(pageController());
+
+
 
 ?>
 <!DOCTYPE html>
