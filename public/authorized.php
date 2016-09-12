@@ -1,4 +1,20 @@
+<?php  
+	session_start();
+
+	$redirectTo = '/login.php';
+	$stay = '/authorized.php';
+	if ($_SESSION['user_is_logged_in'] == false){
+		// echo 'go die';
+	header("Location: $redirectTo");
+	die();
+	} else {
+		echo $_SESSION['logged_in_user'];	}
+
+
+
+?>
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="utf-8">

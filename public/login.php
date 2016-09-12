@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 
 function pageController()
 {
@@ -6,6 +9,8 @@ function pageController()
 	$username = isset($_POST['username']) ? $_POST['username'] : '';
 	$password = isset($_POST['password']) ? $_POST['password'] : '';
 	if($username == 'guest' && $password == 'password'){
+		$_SESSION['logged_in_user'] = $username;
+		$_SESSION['user_is_logged_in'] = true;
 		header("Location: $redirectTo");
 		die();
 	} if($username == '' && $password == '')  {
