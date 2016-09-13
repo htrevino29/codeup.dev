@@ -1,5 +1,6 @@
 <?php
 require_once 'functions.php';
+session_start();
 
 function pageController() {
     $data = ['message' => '', 'title' => 'Login'];
@@ -20,7 +21,7 @@ extract(pageController());
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include 'templates/header.php' ?>
+    <?php include 'header.php' ?>
     <body>
         <div class="container">
             <h1>Login</h1>
