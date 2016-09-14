@@ -1,5 +1,6 @@
 <?php  
 	session_start();
+	// require_once "functions.php";
 
 	$redirectTo = '/login.php';
 	$stay = '/authorized.php';
