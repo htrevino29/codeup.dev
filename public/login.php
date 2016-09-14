@@ -1,12 +1,16 @@
 <?php
 session_start();
-// require_once "functions.php";
+require_once 'auth.php';
+
 
 function pageController()
 {
 	$redirectTo = '/authorized.php';
 	$username = isset($_POST['username']) ? $_POST['username'] : '';
 	$password = isset($_POST['password']) ? $_POST['password'] : '';
+
+	Auth::attempt($username, $password);
+
 	if($username == 'guest' && $password == 'password'){
 		$_SESSION['logged_in_user'] = $username;
 		$_SESSION['user_is_logged_in'] = true;
