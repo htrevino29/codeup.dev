@@ -1,6 +1,6 @@
 <?php
+require_once '../auth.php';
 session_start();
-require_once 'auth.php';
 
 
 function pageController()
