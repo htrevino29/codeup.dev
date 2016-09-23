@@ -1,11 +1,18 @@
 <?php
-define ('DB_HOST', 'mysql:host=127.0.0.1');
-define ('DB_NAME', 'dbname=parks_db');
-define ('DB_USER', 'parks_user');
-define ('DB_PASS', 'vagrant');
-
+require('config.php');
 require('db_connect.php');
 
+$dbc->exec('DROP TABLE IF EXISTS national_parks');
+$dbc->exec(
+	'CREATE TABLE national_parks (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50),
+    location VARCHAR(50) NOT NULL,
+    date_established DATE NOT NULL,
+    area_in_acres double,
+    PRIMARY KEY (id)
+)'
+);
 
 
 
