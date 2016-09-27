@@ -10,6 +10,7 @@ $dbc->exec(
     location VARCHAR(50) NOT NULL,
     date_established DATE NOT NULL,
     area_in_acres double,
+    description TEXT,
     PRIMARY KEY (id)
 )'
 );
