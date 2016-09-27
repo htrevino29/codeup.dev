@@ -7,11 +7,11 @@
         if(!empty($_POST)){
             $query= "INSERT INTO national_parks(name, location, date_established, area_in_acres, description) VALUES (:name, :location, :date_established, :area_in_acres, :description)";
             $stmt = $dbc->prepare($query);
-            $stmt->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
-            $stmt->bindValue(':location',  $_POST['location'],  PDO::PARAM_STR);
-            $stmt->bindValue(':date_established', $_POST['date_established'], PDO::PARAM_STR);
-            $stmt->bindValue(':area_in_acres',  $_POST['area_in_acres'],  PDO::PARAM_STR);
-            $stmt->bindValue(':description', $_POST['description'], PDO::PARAM_STR);
+            $stmt->bindValue(':name', htmlspecialchars(strip_tags($_POST['name'])), PDO::PARAM_STR);
+            $stmt->bindValue(':location',  htmlspecialchars(strip_tags($_POST['location'])),  PDO::PARAM_STR);
+            $stmt->bindValue(':date_established', htmlspecialchars(strip_tags($_POST['date_established'])), PDO::PARAM_STR);
+            $stmt->bindValue(':area_in_acres', htmlspecialchars(strip_tags($_POST['area_in_acres'])),  PDO::PARAM_STR);
+            $stmt->bindValue(':description', htmlspecialchars(strip_tags($_POST['description'])), PDO::PARAM_STR);
 
             $stmt->execute();
         }      
