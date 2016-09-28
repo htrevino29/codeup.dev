@@ -8,8 +8,8 @@ class Rectangle
 
 	public function __construct($height, $width)
 	{
-        $this->height = $height;
-        $this->width  = $width;
+        $this->setHeight = $height;
+        $this->setWidth  = $width;
     }
     public function setHeight()
     {
