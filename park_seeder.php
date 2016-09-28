@@ -71,6 +71,7 @@ $parks = [
     VALUES (:name, :location, :date_established, :area_in_acres, :description)";
 
     $stmt = $dbc->prepare($query);
+    
 	foreach ($parks as $park) {
 		$stmt->bindValue(':name', $park['name'], PDO::PARAM_STR);
     	$stmt->bindValue(':location',  $park['location'],  PDO::PARAM_STR);
