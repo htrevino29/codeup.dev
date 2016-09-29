@@ -1,115 +1,93 @@
-<?php 
-
-    require '../config.php';
-    require_once '../db_connect.php';
-
-    function pageController($dbc){  
-        if(!empty($_POST)){
-            $query= "INSERT INTO national_parks(name, location, date_established, area_in_acres, description) VALUES (:name, :location, :date_established, :area_in_acres, :description)";
-            $stmt = $dbc->prepare($query);
-            $stmt->bindValue(':name', htmlspecialchars(strip_tags($_POST['name'])), PDO::PARAM_STR);
-            $stmt->bindValue(':location',  htmlspecialchars(strip_tags($_POST['location'])),  PDO::PARAM_STR);
-            $stmt->bindValue(':date_established', htmlspecialchars(strip_tags($_POST['date_established'])), PDO::PARAM_STR);
-            $stmt->bindValue(':area_in_acres', htmlspecialchars(strip_tags($_POST['area_in_acres'])),  PDO::PARAM_STR);
-            $stmt->bindValue(':description', htmlspecialchars(strip_tags($_POST['description'])), PDO::PARAM_STR);
-
-            $stmt->execute();
-        }      
-    //    ternary statement reads GET request                
-        $offset = (!empty($_GET)) ? $_GET["offset"] : 0;        // GET request NOT empty? if true, set it to offset => value. If false, set it to 0
-    //    $stmt variable created to contain instance of PDOStatement representing the results of query
-        $query= ("SELECT * FROM national_parks");
-        $stmt = $dbc->prepare($query);   // query() method iterates through national_parks and retrieves metadata
-        $stmt->execute();
-        $query2=('SELECT * FROM national_parks LIMIT 4 OFFSET ' . $offset);
-        $stmt2 = $dbc->prepare($query2);
-        $stmt2->execute();
-        $parks = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-    //    return statement returns parks key parkCount key
-        return [
-        //    retrieves info from national_parks and limits to 4 per page 
-            'parks' => $parks,  // concats the offset amount
-        //    parkCount key will count total number of parks in table
-            'parkCount' => $stmt->rowCount()
-        ];
-    };
-
-    extract(pageController($dbc));    // extracts pageController and passes $dbc from db_connect.php into it
-    
-    
+<?php
+    require 'parks_controller.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>National Parks</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container"> 
-        <h1>'Merica</h1>
-        <table class="table-striped table table-bordered">
-            <tr>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Date Established</th>
-                <th>Area In Acres</th>
-                <th>Description</th>
-            </tr>
-            <!-- foreach statement iterates through parks variable created from key in pageController extraction -->
-             <?php foreach ($parks as $park): ?>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Date Established</th>
+                    <th>Area In Acres</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($parks as $park): ?>
                 <tr>
                     <td><?= $park['name']; ?></td>
                     <td><?= $park['location']; ?></td>
                     <td><?= $park['date_established']; ?></td>
                     <td><?= $park['area_in_acres']; ?></td>
-                    <td><?= $park['description']; ?></td>
                 </tr>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </tbody>
         </table>
-        <?php 
-            $page = 1;
-        //    for loop tied to $offset and will determine the first park on each page 
-             for($i = 0; $i <= $parkCount; $i += 4):        // for loop sets parameters between 0 - length of national_park array
-         ?>
-        <!-- offset key is created here. anchor tag placed within for loop so as to create one for every 4 parks -->
-            <a href="national_parks.php?offset=<?=$i?>"> <div class="btn btn-primary"> <?=$page++?></div></a>     
-        <?php endfor; ?>
-        <br>
-        <h1>ADD PARK</h1>
-        <form method="post">
-            <div class="form-group row">
-              <label class="col-xs-2 col-form-label">Name</label>
-              <div class="col-xs-10">
-                <input class="form-control"  id="example-text-input" name='name'>
-              </div>
+        <div class="row text-center">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <?php if($page != 1): ?>
+                    <li class="page-item">
+                        <a class="page-link" href="/national_parks.php?page=<?= $page - 1; ?>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php for($i = 1; $i <= $max_page; $i++): ?>
+                    <li class="page-item <?= ($page == $i) ? 'active' : ''; ?>">
+                        <a class="page-link" href="/national_parks.php?page=<?= $i; ?>"><?= $i; ?></a>
+                    </li>
+                    <?php endfor; ?>
+                    <?php if($page != $max_page): ?>
+                    <li class="page-item">
+                        <a class="page-link" href="/national_parks.php?page=<?= $page + 1; ?>" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="name">Park Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Park Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Park Location</label>
+                        <input type="text" class="form-control" name="location" id="location" placeholder="Park Location">
+                    </div>
+                    <div class="form-group">
+                        <label for="date_established">Date Established</label>
+                        <input type="text" class="form-control" name="date_established" id="date_established" placeholder="Date Established">
+                    </div>
+                    <div class="form-group">
+                        <label for="area_in_acres">Area In Acres</label>
+                        <input type="text" class="form-control" name="area_in_acres" id="area_in_acres" placeholder="Area In Acres">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea type="text" class="form-control" name="description" id="description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Save Park</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group row">
-              <label  class="col-xs-2 col-form-label" >Location</label>
-              <div class="col-xs-10">
-                <input class="form-control"   id="example-search-input" name='location'>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-2 col-form-label">Date Established<br>(YYYY-MM-DD) </label>
-              <div class="col-xs-10">
-                <input class="form-control"   id="example-email-input" name='date_established'>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-2 col-form-label">Area in acres</label>
-              <div class="col-xs-10">
-                <input class="form-control"   id="example-url-input" name='area_in_acres'>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-2 col-form-label">Description</label>
-              <div class="col-xs-10">
-                <input class="form-control"  id="example-tel-input" name='description'>
-              </div>
-            </div>
-             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </div>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
