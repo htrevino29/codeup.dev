@@ -27,14 +27,15 @@
 }
 .rendersDiv {
 	background-color: #403F3D;
-	height:32vh;
+	height:37vh;
 }
 .dreamPlanRight {
 	background-color: #EFEFEF;
-	height:35vh;
+	height:30vh;
 	border-style: solid;
 	border-color: #403F3D;
 	border-width: 3px;
+	overflow-y: auto;
 }
 .detailsListRight {
 	background-color: #403F3D;
@@ -43,6 +44,15 @@
 .rightSideSpace {
 	height: 2vh;
 	background-color: white;
+}
+.total {
+	font-size: 1.3em;
+	color: white;
+}
+.totalDiv {
+	height:6vh;
+	padding: 10px;
+	overflow-y:auto;
 }
 
 
@@ -56,6 +66,28 @@
 	height: 0.3vh;
 	background-color: #403F3D;
 }
+.progressNumber {
+/*	background-color: black;
+	width:50px !important;
+	margin: 10px;*/
+}
+
+
+
+
+/*...*/
+body{margin-top:50px;}
+/*.glyphicon { margin-right:10px; }*/
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+
+.panel-group {
+    height:500px;
+    overflow-y:auto;
+}
+
+/*...*/
 
 
 
