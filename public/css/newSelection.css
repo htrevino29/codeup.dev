@@ -1,0 +1,61 @@
+/*/*####### left side ####### */
+.leftCol {
+	padding: 0px !important;
+	border-right: solid #403F3D 4px;
+}
+.designButtons {
+	background-color: #EFEFEF;
+	height: 20vh;
+	border-bottom: solid #403F3D 4px;	
+}
+
+.selectionListDiv {
+	background-color: #EFEFEF ;
+	height: 70vh;
+}
+
+/*####### big map #########*/
+.buildLayout {
+	height:90vh;
+}
+
+/*####### right side #######*/
+.rightCol {
+	padding: 0px;
+	height:90vh;
+	padding-right: 10px;
+}
+.rendersDiv {
+	background-color: #403F3D;
+	height:32vh;
+}
+.dreamPlanRight {
+	background-color: #EFEFEF;
+	height:35vh;
+	border-style: solid;
+	border-color: #403F3D;
+	border-width: 3px;
+}
+.detailsListRight {
+	background-color: #403F3D;
+	height: 15vh;
+}
+.rightSideSpace {
+	height: 2vh;
+	background-color: white;
+}
+
+
+/*bottom progress bar*/
+.progressBarBottom {
+	background-color: #EFEFEF;
+	height:9.7vh;
+	padding-left: 0px;
+}
+.barBorder {
+	height: 0.3vh;
+	background-color: #403F3D;
+}
+
+
+

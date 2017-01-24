@@ -1,0 +1,257 @@
+.container-fluid {
+	padding: 0px;
+}
+.backgroundImg {
+	background-color: #878787;
+	height: 1800px;
+	background-image: url("/img/airyBlissDemo/floorPlan.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	padding-left: 0px;
+	padding-right: 0px;
+    
+	
+}
+.woodPanel {
+	background-color: black;
+	height: 600px;
+    /*margin-top: 60px;*/
+	background-image: url("/img/airyBlissDemo/woodPanel.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.helloWorld {
+    opacity: 0.8;
+	color: white;
+    background-color: black;    
+}
+body {
+	background-color: #878787;
+}
+
+
+
+
+
+/*****drop down css*****/
+/* Menu Styles */
+.third-level-menu-left
+{
+    position: absolute;
+    top:    10px;
+    height:80px;
+    left: -185px;
+    width: 185px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background-color: white;
+    border-radius: 15px;   
+}
+.third-level-menu-left > li
+{
+    height: 80px;
+    width: 185px;
+    background: white;
+    border-radius: 15px;
+}
+.third-level-menu-left > li:hover { 
+    background: lightgrey;
+    border-radius: 15px; 
+}
+
+.third-level-menu
+{
+    position: absolute;
+    top:    10px;
+    right: -185px;
+    width: 185px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    border-radius: 15px;
+}
+
+.third-level-menu > li
+{
+    height: 80px;
+    width: 185px;
+    background: white;
+    border-radius: 15px;
+    
+}
+.third-level-menu > li:hover { 
+    background: grey; 
+    border-radius: 15px;
+}
+
+.second-level-menu
+{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    /*width: 150px;*/
+    /*height:80px !important;*/
+    list-style: none;
+    padding: 0;
+    /*margin-top: 20px;*/
+    display: none;
+    border-radius: 15px;
+
+   
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 80px;
+    width:185px;
+    background: white;
+    border-radius: 15px;
+  
+}
+.second-level-menu > li:hover { 
+    background: lightgrey; 
+    border-radius: 15px;
+}
+
+
+
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+    margin-top: -10px;
+    /*margin-left: 1%;*/
+    position: fixed;
+    border-radius: 15px;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    /*height: 150px;*/
+    width: 185px;
+    margin-top: 0px;
+    margin-left: 12px;
+    background: white;
+    opacity: 0.9;
+    text-align:center;
+    border-radius: 15px;
+}
+.top-level-menu > li:hover { 
+    background: lightgrey;
+    border-radius: 15px;
+ }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    padding-top: 1px;
+    height: 80px;
+    width:185px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 2px;   
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+    border-radius: 15px;
+}
+.top-level-menu a:hover { 
+    color: black; 
+    border-color: white;
+    border-radius: 15px;
+}
+
+.menuSpace {
+    width: 10px;
+}
+
+.menuNumber {
+    float: left;
+    margin-left: 4px;
+}
+.subText {
+    font-size: 10px;
+
+}
+.mainText {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+.secondLevelMenu{
+    font-size: 12px;
+    height: 80px;
+    /*margin-top: 20px;*/
+    
+}
+.secondLevelMenuMB{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.secondLevelMenuKR {
+    font-size: 12px;
+    /*margin-top: 20px;*/
+    margin-left: 60px;
+}
+.menuDropBorder {
+    /*height: 80px !important;*/
+}
+.artRoomIcon {
+    margin-top: 10px !important;
+}
+.doubleLineTitle {
+    margin-top: 13px;
+}
+.pergIcon {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.golfCart {
+    margin-top: 5px;
+}
+.masonIcon {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mfp-img {
+    margin-top: -260px !important;
+}
+.topMenuIcon {
+    height: 40px;
+    width: 40px;   
+}
+
+
+
+
+
+
+
+
+
+
