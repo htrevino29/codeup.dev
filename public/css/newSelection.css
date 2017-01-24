@@ -2,11 +2,32 @@
 .leftCol {
 	padding: 0px !important;
 	border-right: solid #403F3D 4px;
+
 }
-.designButtons {
+.designBox {
 	background-color: #EFEFEF;
 	height: 20vh;
 	border-bottom: solid #403F3D 4px;	
+}
+.buttonTitle {
+	/*background-color: green;*/
+	height:10vh;	
+}
+.buttonTitleText {
+	margin-top: 5px;
+	color: #403F3D;
+}
+.buttonGroupDiv {
+	/*background-color: p;*/
+	height:10vh;
+	margin-left: 11%;
+}
+.buttonGroupIcons {
+	height:40px;
+	width:40px;
+	background-color: #403f3d;
+	color:white;
+
 }
 
 .selectionListDiv {
