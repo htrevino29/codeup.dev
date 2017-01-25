@@ -4,10 +4,36 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/newSelection.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
-
-
-
 		<title>New Home build</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                // button1
+                // $(".hideMe1").hide();
+                $(".siteSpecificBtn").click(function(){
+                    $(".hideMe1").toggle();
+                });
+                // button2
+                $(".hideMe2").hide();
+                $(".floorPlanBtn").click(function(){
+                    $(".hideMe2").toggle();
+                });
+                // button3
+                $(".hideMe3").hide();
+                $(".intBtn").click(function(){
+                    $(".hideMe3").toggle();
+                });
+                // button4
+                $(".hideMe4").hide();
+                $(".extBtn").click(function(){
+                    $(".hideMe4").toggle();
+                });
+
+
+            });
+        </script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -23,10 +49,11 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 buttonGroupDiv">
-                            <div class="buttonGroupIcons btn">...</div>
-                            <div class="buttonGroupIcons btn">...</div>
-                            <div class="buttonGroupIcons btn">...</div>
-                            <div class="buttonGroupIcons btn">...</div>
+                            <div class="buttonGroupIcons btn siteSpecificBtn">.1.</div>
+                            <div class="buttonGroupIcons btn floorPlanBtn">.2.</div>
+                            <div class="buttonGroupIcons btn intBtn">.3.</div>
+                            <div class="buttonGroupIcons btn extBtn">.4.</div>
+                            <div class="buttonGroupIcons btn">.5.</div>
                         </div>
                     </div>    
                 </div>
@@ -43,7 +70,7 @@
 					<div class="col-xs-12 selectionListDiv">
 						<!-- ... -->
 						<div class="panel-group" id="accordion">
-                <div class="panel panel-default">
+                <div class="hideMe1 panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span >
@@ -78,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
+                <div class="hideMe2 panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="">
@@ -117,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
+                <div class="hideMe3 panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="">
@@ -151,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
+                <div class="hideMe4 panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="">
@@ -194,11 +221,50 @@
 					<div class="col-xs-12 rightSideSpace"></div>
 
 					<div class="col-xs-12 rendersDiv">
+<!-- ... carousel ... -->
+<!-- <section class="section-white"> -->
+  <!-- <div class="col-xs-12"> -->
 
-					
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="http://placehold.it/215x203" alt="...">
+          <!-- <div class="carousel-caption">
+            <h2>Heading</h2>
+          </div> -->
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/800x400" alt="...">
+          
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/800x400" alt="...">
+          
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+
+  <!-- </div> -->
+<!-- </section>            					 -->
 
 
-
+<!-- ... /carousel ... -->
 					</div>
 
 					<div class="col-xs-12 rightSideSpace"></div>
